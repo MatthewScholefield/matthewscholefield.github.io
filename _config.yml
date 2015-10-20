@@ -1,0 +1,24 @@
+# Site settings
+title: Your awesome title
+email: your-email@domain.com
+description: > # this means to ignore newlines until "baseurl:"
+  Write an awesome description for your new site here. You can edit this
+  line in _config.yml. It will appear in your document head meta (for
+  Google search results) and in your feed.xml site description.
+# baseurl: "/Website-Examples" # the subpath of your site, e.g. /blog/
+url: "http://wolfgange3311999.github.io" # the base hostname & protocol for your site
+github_username:  wolfgange3311999
+
+include:
+  - .nojekyll
+
+exclude:
+  - "Rakefile"
+  - "Gruntfile.coffee"
+  - "node_modules"
+  - "package.json"
+  - "bower_components"
+  - "bower.json"
+
+# Build settings
+markdown: kramdown

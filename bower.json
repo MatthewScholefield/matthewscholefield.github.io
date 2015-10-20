@@ -1,0 +1,25 @@
+{
+  "name": "wolfgange3311999.github.io",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Wolfgange3311999/wolfgange3311999.github.io",
+  "authors": [
+    "Wolfgange3311999 <matthew3311999@gmail.com>"
+  ],
+  "description": "Matthew Scholefield's GitHub page",
+  "main": "index.html",
+  "keywords": [
+    "Examples"
+  ],
+  "license": "GPL-3.0",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
