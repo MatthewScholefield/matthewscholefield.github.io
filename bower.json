@@ -1,14 +1,14 @@
 {
-  "name": "wolfgange3311999.github.io",
+  "name": "matthewscholefield.github.io",
   "version": "0.0.0",
-  "homepage": "https://github.com/Wolfgange3311999/wolfgange3311999.github.io",
+  "homepage": "https://github.com/MatthewScholefield/matthewscholefield.github.io",
   "authors": [
-    "Wolfgange3311999 <matthew3311999@gmail.com>"
+    "Matthew D. Scholefield <matthew331199@gmail.com>"
   ],
   "description": "Matthew Scholefield's GitHub page",
   "main": "index.html",
   "keywords": [
-    "Examples"
+    "Portfolio"
   ],
   "license": "GPL-3.0",
   "private": true,

@@ -1,15 +1,28 @@
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="/vendor/css/bootstrap.min.css">
-</head>
+<div class="navbar-fixed">
+    <nav class="cyan" role="navigation">
+        <div class="nav-wrapper container">
+            <a id="logo-container" href="index.html" class="brand-logo">
+                <img style="height:25px;" src="images/logo.png">
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li class="waves-effect waves-light">
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li class="waves-effect waves-light">
+                    <a href="https://github.com/MatthewScholefield/">GitHub</a>
+                </li>
+            </ul>
+            <ul id="nav-mobile" class="side-nav">
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="https://github.com/MatthewScholefield/">GitHub</a>
+                </li>
+            </ul>
+            <a href="#" data-activates="nav-mobile" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+        </div>
+    </nav>
+</div>
