@@ -1,35 +1,53 @@
 {
-  "name": "wolfgange3311999.github.io",
+  "name": "matthewscholefield.github.io",
   "version": "0.0.0",
-  "description": "Matthew Scholefield's GitHub page",
-  "main": "_site/index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Wolfgange3311999/wolfgange3311999.github.io.git"
-  },
-  "keywords": [
-    "Examples"
+  "homepage": "https://github.com/MatthewScholefield/matthewscholefield.github.io",
+  "authors": [
+    "Matthew D. Scholefield <matthew331199@gmail.com>"
   ],
-  "author": "Matthew Scholefield",
+  "description": "Matthew Scholefield's GitHub page",
+  "main": "index.html",
+  "keywords": [
+    "Portfolio"
+  ],
   "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/Wolfgange3311999/wolfgange3311999.github.io/issues"
-  },
-  "homepage": "https://github.com/Wolfgange3311999/wolfgange3311999.github.io#readme",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "devDependencies": {
-    "grunt": "^1.0.1",
-    "grunt-bower-task": "^0.4.0",
-    "grunt-cli": "^1.2.0",
+    "gh-pages-deploy": "git+https://github.com/mbredif/gh-pages-deploy.git",
+    "grunt": "~0.4.1",
+    "grunt-bower-task": "^0.5.0",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-connect": "^1.0.2",
-    "grunt-contrib-copy": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0",
-    "grunt-exec": "^1.0.1",
-    "jekyll": "^3.0.0-beta1"
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-uglify": "~0.2.4",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-exec": "^3.0.0",
+    "load-grunt-tasks": "~0.2.0",
+    "time-grunt": "~0.2.3"
   },
   "dependencies": {
-    "express": "^4.14.1"
+    "@11ty/eleventy": "^0.5.3",
+    "materialize-css": "^1.0.0-rc.2",
+    "uglify-js": "^3.4.9"
+  },
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "deploy": "gh-pages-deploy",
+    "clean-source": "rimraf README.md package.json .eleventy.js"
+  },
+  "gh-pages-deploy": {
+    "commit": "Update page",
+    "branch": "source",
+    "gh-pages": "master",
+    "noprompt": true
   }
 }
