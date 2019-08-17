@@ -52,7 +52,12 @@ var App = function(_cfg) {
   function initProjects(data) {
     var source   = $('#project-template').html();
     var template = Handlebars.compile(source);
-    var html = template({ 'projects': data })
+    var html = template({ 'projects': data.map(i => {
+      i.title = i.name.split('-')
+          .map(w => w[0].toUpperCase() + w.substr(1).toLowerCase())
+          .join(' ');
+      return i;
+    })});
 
     projectsEl
       .prepend(html)
@@ -78,6 +83,7 @@ var App = function(_cfg) {
 
   var filter = function(name, forceFilter) {
     if (projectsEl.mixItUp('isMixing')) return;
+    name = name.replace(/\+/g, '\\\+');
 
     var state = projectsEl.mixItUp('getState');
     var currTag = $('[data-tag="'+state.activeFilter+'"]');
@@ -113,6 +119,6 @@ Handlebars.registerHelper('rgb', function(str) {
 // swaps errornous chars with '-'
 Handlebars.registerHelper('escape', function(str) {
   if (str)
-    return str.replace(/:|;|\\|\//, '-');
+    return str.replace(/[:;\\\/]/, '-');
   return str;
 });
