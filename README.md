@@ -1,30 +1,16 @@
-# Openspace
+# Personal Page
 
-Openspace is a web app to showcase your open source projects on GitHub.
+This repo holds my [portfolio webpage](https://matthewscholefield.github.io/) which is a customized instance of [OpenSpace](https://github.com/EverythingMe/openspace), a GitHub portfolio webpage. Beyond generating user specific info, the customizations are as follows:
 
-We’ve reached a point where EverythingMe's organization profile on GitHub holds a combination of internal tools, forks of projects we’re using and contributed to and some less interesting bits. We wanted a simple and beautiful way to showcase the projects that are represent our open sourced work.
+ - Titles are space separated and capitalized
+ - Special characters are escaped in tab filters (fixes C++ filter)
 
-Shut up and [show me how it looks](http://everythingme.github.io/openspace/)
+## Development
 
-## Overview
+Setup and view the page locally with a simple web server:
 
-The web app is purely static to allow it to be hosted on GitHub pages, it uses a *projects.json* under */data* folder to determine which projects to display.
-
-While iterating on the design and metadata we're displaying, we created a [tool](https://github.com/EverythingMe/openspace/tree/master/data) to populate the *projects.json* file and also update it (in case you want periodic updates for descriptions / stars and forks counts).
-
-## Getting Started
-
-* Clone and push to *username.github.io* repo.
-* Use the [data tool](https://github.com/EverythingMe/openspace/tree/master/data) to create your *projects.json* file.
-* Modify the projects.json if needed and test locally (simplest way to run it is to run ```python -m SimpleHTTPServer``` in the root folder and browse to [http://localhost:8000](http://localhost:8000) 
-* Push. Profit.
-
-## Acknowledgements
-
-* Bootstrap and [Material Design for Bootstrap](http://fezvrasta.github.io/bootstrap-material-design/) were used for layout, elements, icons and colors.
-* The projects grid and animations were implemented using [MixItUp](https://mixitup.kunkalabs.com/).
-* [fontello](http://fontello.com/) was used for some of the icons
-
-## License
-
-See [LICENSE](https://github.com/EverythingMe/openspace/blob/master/LICENSE.txt) file.
+```bash
+git clone https://github.com/MatthewScholefield/matthewscholefield.github.io/
+cd matthewscholefield.github.io
+python3 -m http.server 8080
+```
