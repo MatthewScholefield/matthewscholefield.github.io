@@ -82,7 +82,7 @@
     "stars_count": 1,
     "forks_count": 0,
     "tags": [
-      "Web"
+      "JavaScript"
     ],
     "links": [
       {
@@ -610,7 +610,7 @@
     "stars_count": 0,
     "forks_count": 0,
     "tags": [
-      "Web"
+      "JavaScript"
     ],
     "links": [
       {
@@ -644,7 +644,7 @@
     "stars_count": 0,
     "forks_count": 0,
     "tags": [
-      "Web"
+      "JavaScript"
     ],
     "links": [
       {
@@ -733,7 +733,8 @@
     "stars_count": 1,
     "forks_count": 0,
     "tags": [
-      "C++"
+      "C++",
+      "Game"
     ],
     "links": [
       {
