@@ -4,6 +4,7 @@ This repo holds my [portfolio webpage](https://matthewscholefield.github.io/) wh
 
  - Titles are space separated and capitalized
  - Special characters are escaped in tab filters (fixes C++ filter)
+ - Added support for Material Icons
 
 ## Development
 
