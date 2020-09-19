@@ -19,6 +19,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700' rel='stylesheet'>
     <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   </head>
   <body>
     <header class="navbar navbar-material-cyan-800">
@@ -75,7 +76,7 @@
       </style>
       <div class="panel">
         <panel-heading>
-          <icon class="icon {{ icon_class }}" style="background-image: url({{ icon_url }})"></icon>
+          <icon class="icon {{ icon_class }}" style="background-image: url({{ icon_url }})">{{ icon_content }}</icon>
           <div>
             <title>{{ title }}</title>
             <stats>
