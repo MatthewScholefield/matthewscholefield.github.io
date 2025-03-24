@@ -65,6 +65,7 @@ def filter_repos(github_repos, repos_to_filter):
     filtered_repos = []
 
     for repo in github_repos:
+        print(repo['name'])
         # filter non-public and fork repos (we request for public repos so might be partially redundant)
         if not repo['fork'] and not repo['private']:
             if not repo['name'] in repos_to_filter:
@@ -136,10 +137,14 @@ def merge_lists(github_repos, local_repos):
 @click.option('--existing-file', type=str, required=False, default='projects.json', help='The existing data file to merge with.')
 @click.option('--output-file', type=str, required=True, default='updated_projects.json', help='The data output file (defaults to data.json).')
 @click.option('--dry-run', is_flag=True, default=False, help='Runs the entire process, without writing the output file.')
-@click.option('--filtered-repos', '-f', type=str, multiple=True, required=False, help='Repos to filter.')
+@click.option('--filtered-json', '-f', type=str, required=False, help='JSON file with array of repos to exclude.')
 @click.option('--verbose', '-v', is_flag=True, default=True, help='Verbose output')
-def main(user, filtered_repos, merge_existing, existing_file, output_file, dry_run, verbose):
+def main(user, filtered_json, merge_existing, existing_file, output_file, dry_run, verbose):
 
+    filtered_repos = []
+    if filtered_json:
+        with open(filtered_json) as f:
+            filtered_repos = json.load(f)
     output_repos = []
     setupLogging(verbose)
 
