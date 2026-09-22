@@ -29,7 +29,7 @@ After the first content sync, `npm run dev` serves the application without fetch
 
 The default branch remains `master`. `.github/workflows/deploy.yml` builds on pushes, manual dispatch, and daily at 06:17 UTC. GitHub Pages must use **GitHub Actions** as its source. Only `dist/` is uploaded; the build step uses the standard GitHub Actions token for public API reads.
 
-The Google Play developer link is optional and does not block deployment. While `googlePlayDeveloperUrl` in `content/site.ts` is unset, the page omits that link. When the intended Recursive Corruption public developer page is available, verify its identity logged out before adding the exact URL; do not substitute a guessed URL or dead legacy listing. LinkedIn retains the historical profile URL, which currently opens an authentication wall in a logged-out browser.
+Recursive Corruption links only to its GitHub organization; there is no Google Play link or store-link configuration. LinkedIn retains the historical profile URL, which currently opens an authentication wall in a logged-out browser.
 
 A failed workflow leaves the last successful deployment in place. GitHub can delay scheduled runs and may disable public-repository schedules after 60 days without activity; re-enable the workflow and dispatch it manually if needed. Independent project Pages sites such as `/spectria/` remain separate deployments; this application adds no catch-all redirects.
 

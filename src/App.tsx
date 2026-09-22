@@ -29,7 +29,7 @@ export default function App() {
           </a>)}
         </div>
         <p className="business-line">Made and run by me as <strong>{site.businessName}</strong>.</p>
-        <p className="recursive-line">Also under <strong>Recursive Corruption</strong>: <a href={site.recursiveCorruptionUrl}>GitHub</a>{site.googlePlayDeveloperUrl && <> · <a href={site.googlePlayDeveloperUrl}>Google Play</a></>}.</p>
+        <p className="recursive-line">Also under <strong>Recursive Corruption</strong>: <a href={site.recursiveCorruptionUrl}>GitHub</a>.</p>
       </section>
       <ProjectCatalog projects={catalog as Project[]} />
       <footer className="page-footer">Have a question or something to share? <a href={'mailto:' + site.email}>Say hi.</a></footer>

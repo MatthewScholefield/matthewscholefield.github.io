@@ -14,5 +14,4 @@ export const site = {
     { name: 'Taichung Connect', url: 'https://taichung-connect.hs.vc/' },
   ],
   recursiveCorruptionUrl: 'https://github.com/RecursiveCorruption',
-  googlePlayDeveloperUrl: null as string | null,
 }
