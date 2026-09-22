@@ -1,0 +1,35 @@
+{
+  "name": "matthewscholefield-homepage",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run catalog:sync && tsc -b && vite build",
+    "preview": "vite preview",
+    "catalog:inventory": "tsx scripts/sync-github.ts --inventory",
+    "catalog:sync": "tsx scripts/sync-github.ts",
+    "test:catalog": "tsx --test scripts/*.test.ts"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "class-variance-authority": "^0.7.1",
+    "cn": "^0.4.0",
+    "lucide-react": "^1.47.0",
+    "radix-ui": "^1.6.7",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@types/sanitize-html": "^2.16.1",
+    "@vitejs/plugin-react": "^6.1.1",
+    "sanitize-html": "^2.17.7",
+    "tsx": "^4.23.15",
+    "typescript": "~6.0.2",
+    "vite": "^8.3.0"
+  }
+}
