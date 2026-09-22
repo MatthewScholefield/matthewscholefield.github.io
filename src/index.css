@@ -45,7 +45,7 @@ h1 { font-size: clamp(2rem, 4vw, 2.25rem); line-height: 1.2; font-weight: 650; l
 .app-card { display: flex; flex-direction: column; align-items: start; gap: .3rem; border: 1px solid #d5dee2; border-radius: 8px; padding: 1.5rem; background: white; color: #17242a; text-decoration: none; }
 .app-card:hover { border-color: #35645a; }
 .app-card strong { font-size: 1.25rem; font-weight: 600; }
-.app-domain { color: #52636b; font-size: .875rem; }
+.app-tagline { color: #52636b; font-size: .875rem; }
 .visit-site { color: #35645a; text-decoration: underline; text-underline-offset: .2em; margin-top: .6rem; }
 .business-line { margin-top: 1.25rem; font-size: .9375rem; }
 .recursive-line { color: #52636b; margin-top: .5rem; font-size: .875rem; }

@@ -6,7 +6,7 @@ import { ReadmeDialog } from '@/components/ReadmeDialog'
 import type { Category, Project } from '@/types'
 
 type Tab = 'all' | Category
-const labels: Record<Tab, string> = { all: 'All', 'small-apps': 'Small apps', tools: 'Tools', libraries: 'Libraries', games: 'Games', experiments: 'Experiments' }
+const labels: Record<Tab, string> = { all: 'All', 'small-apps': 'Apps', tools: 'Tools', libraries: 'Libraries', games: 'Games', experiments: 'Experiments' }
 const tabs = Object.keys(labels) as Tab[]
 
 export function ProjectCatalog({ projects }: { projects: Project[] }) {
@@ -20,7 +20,7 @@ export function ProjectCatalog({ projects }: { projects: Project[] }) {
 
   return <section className="home-section" aria-labelledby="projects-heading">
     <h2 id="projects-heading">Projects</h2>
-    <p className="section-intro">Libraries, little tools, games, and other things I’ve made.</p>
+    <p className="section-intro">Libraries, tools, games, and other things I’ve made.</p>
     <Tabs value={tab} onValueChange={value => setTab(value as Tab)}>
       <div className="tabs-scroll">
         <TabsList variant="line" aria-label="Project categories">

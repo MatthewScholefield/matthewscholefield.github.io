@@ -20,15 +20,15 @@ export default function App() {
       </header>
       <section className="home-section" aria-labelledby="apps-heading">
         <h2 id="apps-heading">Apps</h2>
-        <p className="section-intro">I also have a few apps.</p>
+        <p className="section-intro">I have a few more "full featured" apps.</p>
         <div className="card-grid">
           {site.apps.map(app => <a className="app-card" href={app.url} key={app.name}>
             <strong>{app.name}</strong>
-            <span className="app-domain">{new URL(app.url).hostname}</span>
+            <span className="app-tagline">{app.tagline}</span>
             <span className="visit-site">Visit site</span>
           </a>)}
         </div>
-        <p className="business-line">Made and run by me as <strong>{site.businessName}</strong>.</p>
+        <p className="business-line">Made by me.</p>
         <p className="recursive-line">Also under <strong>Recursive Corruption</strong>: <a href={site.recursiveCorruptionUrl}>GitHub</a>.</p>
       </section>
       <ProjectCatalog projects={catalog as Project[]} />

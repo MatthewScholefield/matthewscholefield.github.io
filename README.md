@@ -18,7 +18,7 @@ After the first content sync, `npm run dev` serves the application without fetch
 
 ## Content
 
-- `content/site.ts`: introduction, contact links, business identity, and featured apps.
+- `content/site.ts`: introduction, contact links, and featured apps with their taglines.
 - `content/catalog.json`: exact repository identities, categories, ordering, and explicit exclusion reasons. Every reviewed candidate is recorded. New repositories remain unpublished until reviewed.
 - `npm run catalog:inventory`: fetches public non-fork personal repositories and explicitly curated organization repositories. Raw preferred READMEs and provenance are available under ignored `.cache/github/` for editorial review. A missing README remains an eligible candidate.
 - `npm run build`: fetches current descriptions and GitHub-rendered READMEs, sanitizes them, and builds the site. Descriptions and README content belong to GitHub; do not copy them into editorial configuration.
